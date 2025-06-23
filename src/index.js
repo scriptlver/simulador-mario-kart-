@@ -37,6 +37,10 @@ async function getRandomBlock(){
   return result;
 }
 
+async function logRollResult(characterName, block, diceResult, attribute){
+  console.log(`${characterName} 🎲 rolou um dado de ${block} ${diceResult} + ${attribute} = ${diceResult + attribute}`);
+}  
+
 async function playRaceEngine(character1,character2){
   for(let round = 1; round <= 5; round++){
     console.log(`🏁 Rodada ${round}`);
@@ -44,9 +48,8 @@ async function playRaceEngine(character1,character2){
     //sortear bloco
     let block = await getRandomBlock();
     console.log(`Bloco sorteado: ${block}`);
-  }
 
-  //rolar dados
+    //rolar dados
   let diceResult1 = await rollDice();
   let diceResult2 = await rollDice();
 
@@ -57,19 +60,47 @@ async function playRaceEngine(character1,character2){
   if((block === "RETA")){
     totalTestSkill1 = diceResult1 + character1.VELOCIDADE;
     totalTestSkill2 = diceResult2 + character2.VELOCIDADE;
+
+    await logRollResult(character1.NOME, "velocidade", diceResult1, character1.VELOCIDADE);
+    await logRollResult(character2.NOME, "velocidade", diceResult2, character2.VELOCIDADE);
   }
+
+
 
   if((block === "CURVA")){
     totalTestSkill1 = diceResult1 + character1.MANOBRABILIDADE;
     totalTestSkill2 = diceResult2 + character2.MANOBRABILIDADE;
+
+    await logRollResult(character1.NOME, "manobrabilidade", diceResult1, character1.MANOBRABILIDADE);
+    await logRollResult(character2.NOME, "manobrabilidade", diceResult2, character2.MANOBRABILIDADE);
   }
 
   if((block === "CONFRONTO")){
-    totalTestSkill1 = diceResult1 + character1.PODER;
-    totalTestSkill2 = diceResult2 + character2.PODER;
+    let powerResult1 = diceResult1 + character1.PODER;
+    let powerResult2 = diceResult2 + character2.PODER;
+
+    console.log(`${character1.NOME} confrontou com ${character2.NOME}! 🥊`);
+    await logRollResult(character1.NOME, "poder", diceResult1, character1.PODER);
+    await logRollResult(character2.NOME, "poder", diceResult2, character2.PODER);
+    
+    character2.PONTOS -= powerResult1 > powerResult2 && character2.PONTOS > 0 ? 1 : 0;
+    character1.PONTOS -= powerResult2 > powerResult1 && character1.PONTOS > 0 ? 1 : 0;
+    
+    console.log(powerResult1 === powerResult2 ? "Empate no confronto! Nenhum ponto perdido. 💫" : "") 
   }
 
+  if (totalTestSkill1 > totalTestSkill2) {
+    console.log(`${character1.NOME} marcou um ponto!`);
+    character1.PONTOS ++;
+  } else if (totalTestSkill2 > totalTestSkill1) {
+    console.log(`${character2.NOME} marcou um ponto!`);
+    character2.PONTOS ++;
+  }
+
+  console.log("------------------------------------------------");
+
 }
+  }
 
 (async function main() {
   console.log(
