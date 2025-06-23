@@ -104,7 +104,6 @@ async function playRaceEngine(character1, character2) {
   }
 }
 
-// Função para pedir nome via terminal
 function askCharacters() {
   const rl = readline.createInterface({
     input: process.stdin,
