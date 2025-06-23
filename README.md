@@ -84,18 +84,55 @@
 <label for="jogadores-item">O Computador deve receber dois personagens para disputar a corrida em um objeto cada</label>
 
 <b>Pistas:</b>
-
 <ul>
-  <li><input type="checkbox" id="pistas-1-item" /> <label for="pistas-1-item">Os personagens irão correr em uma pista aleatória de 5 rodadas</label></li>
-  <li><input type="checkbox" id="pistas-2-item" /> <label for="pistas-2-item">A cada rodada, será sorteado um bloco da pista que pode ser uma reta, curva ou confronto</label>
+  <li>
+    <input type="checkbox" id="pistas-1-item" />
+    <label for="pistas-1-item">Os personagens irão correr em uma pista aleatória de 5 rodadas</label>
+  </li>
+  <li>
+    <input type="checkbox" id="pistas-2-item" />
+    <label for="pistas-2-item">A cada rodada, será sorteado um bloco da pista que pode ser uma reta, curva ou confronto</label>
     <ul>
-      <li><input type="checkbox" id="pistas-2-1-item" /> <label for="pistas-2-1-item">Caso o bloco da pista seja uma RETA, o jogador deve jogar um dado de 6 lados e somar o atributo VELOCIDADE, quem vencer ganha um ponto</label></li>
-      <li><input type="checkbox" id="pistas-2-2-item" /> <label for="pistas-2-2-item">Caso o bloco da pista seja uma CURVA, o jogador deve jogar um dado de 6 lados e somar o atributo MANOBRABILIDADE, quem vencer ganha um ponto</label></li>
-      <li><input type="checkbox" id="pistas-2-3-item" /> <label for="pistas-2-3-item">Caso o bloco da pista seja um CONFRONTO, o jogador deve jogar um dado de 6 lados e somar o atributo PODER, quem perder, perde um ponto</label></li>
-      <li><input type="checkbox" id="pistas-2-3-item" /> <label for="pistas-2-3-item">Nenhum jogador pode ter pontuação negativa (valores abaixo de 0)</label></li>
+      <li>
+        <input type="checkbox" id="pistas-2-1-item" />
+        <label for="pistas-2-1-item">
+          Caso o bloco da pista seja uma RETA, o jogador deve jogar um dado de 6 lados e somar o atributo VELOCIDADE, quem vencer ganha um ponto
+        </label>
+      </li>
+      <li>
+        <input type="checkbox" id="pistas-2-2-item" />
+        <label for="pistas-2-2-item">
+          Caso o bloco da pista seja uma CURVA, o jogador deve jogar um dado de 6 lados e somar o atributo MANOBRABILIDADE, quem vencer ganha um ponto
+        </label>
+      </li>
+      <li>
+        <input type="checkbox" id="pistas-2-3-item" />
+        <label for="pistas-2-3-item">
+          Caso o bloco da pista seja um CONFRONTO, o jogador deve jogar um dado de 6 lados e somar o atributo PODER, quem perder, perde um ponto
+        </label>
+      </li>
+      <li>
+        <input type="checkbox" id="pistas-2-4-item" />
+        <label for="pistas-2-4-item">
+          Sortear aleatoriamente se é um casco (-1 ponto) ou uma bomba (-2 pontos)
+        </label>
+      </li>
+      <li>
+        <input type="checkbox" id="pistas-2-5-item" />
+        <label for="pistas-2-5-item">
+          Quem vence o confronto ganha um turbo (+1 ponto)
+        </label>
+      </li>
+      <li>
+        <input type="checkbox" id="pistas-2-6-item" />
+        <label for="pistas-2-6-item">
+          Nenhum jogador pode ter pontuação negativa (valores abaixo de 0)
+        </label>
+      </li>
     </ul>
   </li>
 </ul>
+
 
 <b>Condição de vitória:</b>
 
