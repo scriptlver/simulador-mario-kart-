@@ -45,3 +45,9 @@ const player6 = {
     PODER: 5,
     PONTOS: 0,
 }
+
+async function main(){
+    console.log("hello");
+}
+
+main();
