@@ -1,4 +1,4 @@
-<h1>Desafio de projeto do Sony Mainardi: Mario Kart.JS</h1>
+<h1>Desafio de projeto: Mario Kart.JS</h1>
 
   <table>
         <tr>
