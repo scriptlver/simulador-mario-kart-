@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
 body {
   font-family: Arial, sans-serif;
   background-color: black;
@@ -10,6 +12,8 @@ body {
 h1 {
   margin-top: 60px;  /* aumenta o espaço acima do título */
   margin-bottom: 15px; /* garante espaço abaixo */
+  font-family: 'Press Start 2P', cursive;
+  font-size: 20px;    /* tamanho da fonte */
 }
 
 
