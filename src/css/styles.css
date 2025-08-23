@@ -1,0 +1,61 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color: black;
+  color: white;
+  text-align: center;
+}
+
+h1 {
+  margin-top: 20px;
+}
+
+.characters {
+  margin: 20px auto;
+}
+
+.cards {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
+.card {
+  border: 2px solid white;
+  border-radius: 10px;
+  padding: 10px;
+  cursor: pointer;
+  width: 120px;
+  transition: transform 0.2s, border-color 0.2s;
+}
+
+.card img {
+  width: 100px;
+  height: 100px;
+}
+
+.card.selected {
+  border-color: gold;
+  transform: scale(1.1);
+}
+
+button {
+  margin-top: 20px;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+#raceLog {
+  margin-top: 30px;
+  text-align: left;
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+  max-height: 300px;
+  overflow-y: auto;
+  border: 1px solid white;
+  padding: 10px;
+  border-radius: 10px;
+  background-color: #111;
+}
