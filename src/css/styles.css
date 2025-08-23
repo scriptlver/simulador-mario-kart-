@@ -9,16 +9,31 @@ h1 {
   margin-top: 20px;
 }
 
-.characters {
+/* container principal lado a lado */
+.main-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  width: 90%;
   margin: 20px auto;
+  gap: 20px;
+}
+
+/* lado esquerdo: personagens */
+.characters {
+  flex: 1;
+  text-align: center;
 }
 
 .cards {
   display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
+  flex-wrap: wrap;        /* permite quebrar para outra linha */
+  justify-content: center; /* centraliza os cards */
   gap: 15px;
+  max-width: 400px;       /* controla quantos cabem por linha */
+  margin: 0 auto;         /* centraliza dentro do container */
 }
+
 
 .card {
   border: 2px solid white;
@@ -27,6 +42,7 @@ h1 {
   cursor: pointer;
   width: 120px;
   transition: transform 0.2s, border-color 0.2s;
+  background-color: #111;
 }
 
 .card img {
@@ -39,6 +55,7 @@ h1 {
   transform: scale(1.1);
 }
 
+/* botão */
 button {
   margin-top: 20px;
   padding: 10px 20px;
@@ -47,15 +64,14 @@ button {
 }
 
 #raceLog {
-  margin-top: 30px;
+  flex: 1;
   text-align: left;
-  width: 80%;
-  margin-left: auto;
-  margin-right: auto;
-  max-height: 300px;
-  overflow-y: auto;
+  height: 400px;          /* altura fixa */
   border: 1px solid white;
   padding: 10px;
   border-radius: 10px;
   background-color: #111;
+  overflow-y: auto;
+  font-size: 14px;
 }
+

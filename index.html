@@ -8,39 +8,44 @@
 <body>
   <h1>Mini Mario Kart</h1>
 
-  <div class="characters">
-    <h2>Escolha dois personagens:</h2>
-    <div class="cards">
-      <div class="card" data-name="Mario">
-        <img src="docs/mario.gif" alt="Mario">
-        <p>Mario</p>
-      </div>
-      <div class="card" data-name="Peach">
-        <img src="docs/peach.gif" alt="Peach">
-        <p>Peach</p>
-      </div>
-      <div class="card" data-name="Yoshi">
-        <img src="docs/yoshi.gif" alt="Yoshi">
-        <p>Yoshi</p>
-      </div>
-      <div class="card" data-name="Bowser">
-        <img src="docs/bowser.gif" alt="Bowser">
-        <p>Bowser</p>
-      </div>
-      <div class="card" data-name="Luigi">
-        <img src="docs/luigi.gif" alt="Luigi">
-        <p>Luigi</p>
-      </div>
-      <div class="card" data-name="Donkey Kong">
-        <img src="docs/dk.gif" alt="Donkey Kong">
-        <p>Donkey Kong</p>
+  <div class="main-container">
+    <!-- Lado esquerdo: personagens -->
+    <div class="characters">
+      <h2>Escolha dois personagens:</h2>
+      <div class="cards">
+        <div class="card" data-name="Mario">
+          <img src="docs/mario.gif" alt="Mario">
+          <p>Mario</p>
+        </div>
+        <div class="card" data-name="Peach">
+          <img src="docs/peach.gif" alt="Peach">
+          <p>Peach</p>
+        </div>
+        <div class="card" data-name="Yoshi">
+          <img src="docs/yoshi.gif" alt="Yoshi">
+          <p>Yoshi</p>
+        </div>
+        <div class="card" data-name="Bowser">
+          <img src="docs/bowser.gif" alt="Bowser">
+          <p>Bowser</p>
+        </div>
+        <div class="card" data-name="Luigi">
+          <img src="docs/luigi.gif" alt="Luigi">
+          <p>Luigi</p>
+        </div>
+        <div class="card" data-name="Donkey Kong">
+          <img src="docs/dk.gif" alt="Donkey Kong">
+          <p>Donkey Kong</p>
+        </div>
       </div>
     </div>
+
+    <!-- Lado direito: log da corrida -->
+    <div id="raceLog"></div>
   </div>
 
+  <!-- Botão embaixo -->
   <button id="startRace" disabled>Iniciar Corrida</button>
-
-  <div id="raceLog"></div>
 
   <script src="script.js"></script>
 </body>
