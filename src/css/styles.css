@@ -3,6 +3,8 @@ body {
   background-color: black;
   color: white;
   text-align: center;
+  margin: 0;
+  padding: 0;
 }
 
 h1 {
@@ -14,9 +16,10 @@ h1 {
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
-  width: 90%;
-  margin: 20px auto;
-  gap: 20px;
+  max-width: 1200px;   /* largura máxima centralizada */
+  margin: 20px auto;   /* centraliza tudo na tela */
+  gap: 40px;           /* espaço igual entre os dois lados */
+  padding: 0 40px;     /* margens iguais dos dois lados */
 }
 
 /* lado esquerdo: personagens */
@@ -25,15 +28,18 @@ h1 {
   text-align: center;
 }
 
+.characters h2 {
+  margin-bottom: 30px;
+}  
+
 .cards {
   display: flex;
-  flex-wrap: wrap;        /* permite quebrar para outra linha */
-  justify-content: center; /* centraliza os cards */
+  flex-wrap: wrap;        
+  justify-content: center; 
   gap: 15px;
-  max-width: 400px;       /* controla quantos cabem por linha */
-  margin: 0 auto;         /* centraliza dentro do container */
+  max-width: 400px;       
+  margin: 0 auto;         
 }
-
 
 .card {
   border: 2px solid white;
@@ -66,12 +72,11 @@ button {
 #raceLog {
   flex: 1;
   text-align: left;
-  height: 400px;          /* altura fixa */
+  height: 400px;
   border: 1px solid white;
-  padding: 10px;
+  padding: 15px;         /* padding menor, deixa simétrico */
   border-radius: 10px;
   background-color: #111;
   overflow-y: auto;
   font-size: 14px;
 }
-
