@@ -9,7 +9,7 @@ body {
 
 h1 {
   margin-top: 60px;  /* aumenta o espaço acima do título */
-  margin-bottom: 30px; /* garante espaço abaixo */
+  margin-bottom: 15px; /* garante espaço abaixo */
 }
 
 
@@ -66,7 +66,7 @@ h1 {
 
 /* botão */
 button {
-  margin-top: 80px;
+  margin-top: 50px;
   padding: 10px 20px;
   font-size: 16px;
   cursor: pointer;
@@ -82,4 +82,11 @@ button {
   background-color: #111;
   overflow-y: auto;
   font-size: 14px;
+}
+
+.description {
+  max-width: 700px;
+  margin: 10px auto 30px;
+  font-size: 16px;
+  color: #ccc;
 }
