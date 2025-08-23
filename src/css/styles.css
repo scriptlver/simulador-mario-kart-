@@ -1,0 +1,119 @@
+/* Fundo preto com gradiente animado */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  color: white;
+  overflow: hidden;
+}
+
+.background {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(270deg, #ff0077, #00f7ff, #ffea00);
+  background-size: 600% 600%;
+  animation: gradientShift 10s ease infinite;
+  z-index: -1;
+}
+
+@keyframes gradientShift {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+.container {
+  display: flex;
+  height: 100vh;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+/* Coluna esquerda - escolha */
+.characters {
+  flex: 1;
+  padding: 20px;
+  overflow-y: auto;
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+  gap: 15px;
+  margin: 20px 0;
+}
+
+.character-card {
+  background: rgba(0,0,0,0.6);
+  border: 2px solid white;
+  border-radius: 10px;
+  padding: 10px;
+  text-align: center;
+  cursor: pointer;
+  transition: transform 0.2s, border 0.2s;
+}
+
+.character-card img {
+  width: 100%;
+  border-radius: 8px;
+}
+
+.character-card:hover {
+  transform: scale(1.05);
+  border-color: yellow;
+}
+
+.character-card.selected {
+  border-color: lime;
+  box-shadow: 0 0 15px lime;
+}
+
+button {
+  margin-top: 10px;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 6px;
+  background: yellow;
+  color: black;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+button:disabled {
+  background: grey;
+  cursor: not-allowed;
+}
+
+button:hover:enabled {
+  transform: scale(1.05);
+}
+
+/* Coluna direita - corrida */
+.race-area {
+  flex: 2;
+  padding: 20px;
+  border-left: 2px solid rgba(255,255,255,0.3);
+  overflow-y: auto;
+}
+
+#scoreboard {
+  font-size: 1.2em;
+  margin-bottom: 10px;
+}
+
+#logs {
+  height: 60vh;
+  overflow-y: auto;
+  padding: 10px;
+  background: rgba(0,0,0,0.4);
+  border-radius: 8px;
+  font-size: 0.9em;
+  line-height: 1.4em;
+}
+
+.race-controls {
+  margin-top: 15px;
+}

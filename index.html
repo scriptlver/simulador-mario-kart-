@@ -1,12 +1,56 @@
- <!DOCTYPE html>
- <html lang="pt-BR">
- <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Simulador Mario Kart</title>
- </head>
- <body>
-    <script src=src/index.js></script>
-    
- </body>
- </html>
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Mini Mario Kart</title>
+  <link rel="stylesheet" href="src/css/styles.css">
+</head>
+<body>
+  <div class="background"></div>
+  <div class="container">
+    <!-- Escolha dos personagens -->
+    <div class="characters">
+      <h2>Escolha os personagens</h2>
+      <div class="cards">
+        <div class="character-card" data-name="Mario">
+          <img src="docs/mario.gif" alt="Mario">
+          <p>Mario</p>
+        </div>
+        <div class="character-card" data-name="Peach">
+          <img src="docs/peach.gif" alt="Peach">
+          <p>Peach</p>
+        </div>
+        <div class="character-card" data-name="Yoshi">
+          <img src="docs/yoshi.gif" alt="Yoshi">
+          <p>Yoshi</p>
+        </div>
+        <div class="character-card" data-name="Bowser">
+          <img src="docs/bowser.gif" alt="Bowser">
+          <p>Bowser</p>
+        </div>
+        <div class="character-card" data-name="Luigi">
+          <img src="docs/luigi.gif" alt="Luigi">
+          <p>Luigi</p>
+        </div>
+        <div class="character-card" data-name="Donkey Kong">
+          <img src="docs/dk.gif" alt="Donkey Kong">
+          <p>Donkey Kong</p>
+        </div>
+      </div>
+      <button id="startBtn" disabled>🚦 Iniciar corrida</button>
+    </div>
+
+    <!-- Área da corrida -->
+    <div class="race-area">
+      <h2>🏁 Corrida</h2>
+      <div id="scoreboard">Selecione os personagens para começar...</div>
+      <div id="logs"></div>
+      <div class="race-controls">
+        <button id="nextRoundBtn" disabled>➡️ Próxima rodada</button>
+        <button id="autoBtn" disabled>⚡ Auto (5 rodadas)</button>
+      </div>
+    </div>
+  </div>
+  <script src="index.js"></script>
+</body>
+</html>
